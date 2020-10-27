@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>markdown测试</title>
+      <link href="2020/10/27/markdown%E6%B5%8B%E8%AF%95/"/>
+      <url>2020/10/27/markdown%E6%B5%8B%E8%AF%95/</url>
+      
+        <content type="html"><![CDATA[<h1 id="markdown-测试"><a href="#markdown-测试" class="headerlink" title="markdown 测试"></a>markdown 测试</h1><div class="note simple"><p>默认提示</p></div><div class="note default simple"><p>default  提示</p></div><div class="note primary simple"><p>primary 提示</p></div><div class="note success simple"><p>success 提示</p></div><div class="note info simple"><p>info 提示</p></div><div class="note warning simple"><p>warning 提示</p></div><div class="note danger simple"><p>danger 提示</p></div><ul><li>无序<ul><li>无序</li></ul></li><li>无序</li></ul><ol><li>有序</li><li>有序<ol><li>有序</li></ol></li></ol><a class="btn-beautify button--animated " href="http://www.baidu.com"   title="Nano"><span>Nano</span></a><span class="hide-inline"><button type="button" class="hide-button button--animated" style="">测试  </button><span class="hide-content">测试成功</span></span><div class="tabs" id="test"><ul class="nav-tabs"><li class="tab active"><button type="button" data-href="#test-1">test 1</button></li><li class="tab"><button type="button" data-href="#test-2">test 2</button></li></ul><div class="tab-contents"><div class="tab-item-content active" id="test-1"><table><thead><tr><th>测试</th><th>测试</th></tr></thead><tbody><tr><td>测试</td><td>测试</td></tr></tbody></table><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div><div class="tab-item-content" id="test-2"><p>测试</p><p><a class="btn-beautify button--animated " href="http://www.baidu.com"   title="Nano"><span>Nano</span></a></p><button type="button" class="tab-to-top"><i class="fas fa-arrow-up"></i></button></div></div></div>]]></content>
+      
+      
+      <categories>
+          
+          <category> 测试 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> markdown </tag>
+            
+            <tag> normal </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hello World</title>
       <link href="2020/10/27/hello-world/"/>
       <url>2020/10/27/hello-world/</url>
