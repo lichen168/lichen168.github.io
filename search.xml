@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>nginx</title>
+      <link href="2020/10/27/nginx/"/>
+      <url>2020/10/27/nginx/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Nginx-限流策略"><a href="#Nginx-限流策略" class="headerlink" title="Nginx 限流策略"></a>Nginx 限流策略</h1><ul><li>控制速率</li><li>控制并发连接数</li></ul><hr><h1 id="控制速率"><a href="#控制速率" class="headerlink" title="控制速率"></a>控制速率</h1><h2 id="漏桶算法-Leaky-Bucket"><a href="#漏桶算法-Leaky-Bucket" class="headerlink" title="漏桶算法 Leaky Bucket"></a>漏桶算法 <code>Leaky Bucket</code></h2><p><strong>def:</strong> </p><blockquote><p>请求到达桶内,桶会以一定的速度出水,当水流过大时会直接<code>溢出</code>.可以强行限制传输速率.</p></blockquote><img src= "/img/loading.gif" data-lazy-src="https://nano-hexo-blog.oss-cn-beijing.aliyuncs.com/img/image-20201027152042566.png" alt="nginx漏桶算法原理" style="zoom:67%;" /><p><strong>issue</strong>:</p><ul><li>突发情况请求突然激增,多余平均数的请求会被抛弃</li></ul><p><strong>nginx 配置:</strong></p><figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="section">http</span> &#123;</span><br><span class="line">    <span class="comment"># binary_remote_addr 是一种key 表示基于 remote_addr限流 binary 压缩内存 myRateLimit:10m 划分一个10m的内存空间叫myRateLimit</span></span><br><span class="line"><span class="attribute">limit_req_zone</span> <span class="variable">$binary_remote_addr</span> zone = myRateLimit:<span class="number">10m</span> rate = 1r/s;</span><br><span class="line">...</span><br><span class="line"><span class="section">server</span> &#123;</span><br><span class="line">...</span><br><span class="line"><span class="attribute">location</span> /search/ &#123;</span><br><span class="line"><span class="attribute">limit_req</span> zone = one brust=<span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> nginx </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 限流 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>markdown测试</title>
       <link href="2020/10/27/markdown%E6%B5%8B%E8%AF%95/"/>
       <url>2020/10/27/markdown%E6%B5%8B%E8%AF%95/</url>
